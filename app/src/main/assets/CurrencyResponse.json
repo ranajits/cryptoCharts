@@ -1,0 +1,42 @@
+{
+  "request_id": "111",
+  "success": true,
+  "response_code": 200,
+  "message": "success",
+  "data": {
+    "portfolios": [
+      {
+        "logo": "https://drive.google.com/file/d/0B6_b36vU3BW2ZFJUMjN4SkVfSDA/view?usp=sharing",
+        "currency_name": "BTC",
+        "share_percentage": "+1,6%",
+        "currency_to_dollar": "$29,850.15 ",
+        "currency_value": "2.73 BTC",
+        "chart_data": null
+      },
+      {
+        "logo": "https://drive.google.com/uc?id=0B6_b36vU3BW2ZFJUMjN4SkVfSDA",
+        "currency_name": "ETH",
+        "share_percentage": "-0,82%",
+        "currency_to_dollar": "$10,561.24",
+        "currency_value": "47.61 ETH",
+        "chart_data": null
+      },
+      {
+        "logo": "https://doc-0s-ak-docs.googleusercontent.com/docs/securesc/i0r0sg117cvod54i15d091gvmafaf2ji/k5hgqjse1ham4n4hrpkvs71d3ob164sc/1620973125000/00184561884485476294/04359672664186897194/1evNxiyU9A5yB8LYnUVsOq3--Y6hc4JJq?e=view&authuser=1&nonce=apkc8d4trp1vg&user=04359672664186897194&hash=58qq42cdpmjl33tvup9q2jon6c70ftod",
+        "currency_name": "LTC",
+        "share_percentage": "-2,10%",
+        "currency_to_dollar": "$3,676.76 ",
+        "currency_value": "39,27 LTC",
+        "chart_data": null
+      },
+      {
+        "logo": "https://doc-0s-ak-docs.googleusercontent.com/docs/securesc/i0r0sg117cvod54i15d091gvmafaf2ji/k5hgqjse1ham4n4hrpkvs71d3ob164sc/1620973125000/00184561884485476294/04359672664186897194/1evNxiyU9A5yB8LYnUVsOq3--Y6hc4JJq?e=view&authuser=1&nonce=apkc8d4trp1vg&user=04359672664186897194&hash=58qq42cdpmjl33tvup9q2jon6c70ftod",
+        "currency_name": "XRP",
+        "share_percentage": "+0,27%",
+        "currency_to_dollar": "$5,241.62 ",
+        "currency_value": "16447,65 XRP",
+        "chart_data": null
+      }
+    ]
+  }
+}
