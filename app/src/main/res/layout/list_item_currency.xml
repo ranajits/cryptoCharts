@@ -15,6 +15,7 @@
         android:layout_height="50dp"
         android:layout_margin="10dp"
         android:background="@drawable/ic_rectangle_red"
+        android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

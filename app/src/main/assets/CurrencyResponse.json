@@ -6,35 +6,43 @@
   "data": {
     "portfolios": [
       {
-        "logo": "https://drive.google.com/file/d/0B6_b36vU3BW2ZFJUMjN4SkVfSDA/view?usp=sharing",
+        "logo": "https://drive.google.com/uc?id=1GAFjvDbeJ8ASt3y_1USXJ-wmYrXRP9Ij",
         "currency_name": "BTC",
         "share_percentage": "+1,6%",
         "currency_to_dollar": "$29,850.15 ",
         "currency_value": "2.73 BTC",
+        "chart_shadow_color": "#FEF0EE",
+        "chart_line_color": "#F6543E",
         "chart_data": null
       },
       {
-        "logo": "https://drive.google.com/uc?id=0B6_b36vU3BW2ZFJUMjN4SkVfSDA",
+        "logo": "https://drive.google.com/uc?id=1WbKd1I56xBpZIPbP73d1uREPUL0I30wx",
         "currency_name": "ETH",
         "share_percentage": "-0,82%",
         "currency_to_dollar": "$10,561.24",
         "currency_value": "47.61 ETH",
+        "chart_shadow_color": "#F1F2F8",
+        "chart_line_color": "#6374C3",
         "chart_data": null
       },
       {
-        "logo": "https://doc-0s-ak-docs.googleusercontent.com/docs/securesc/i0r0sg117cvod54i15d091gvmafaf2ji/k5hgqjse1ham4n4hrpkvs71d3ob164sc/1620973125000/00184561884485476294/04359672664186897194/1evNxiyU9A5yB8LYnUVsOq3--Y6hc4JJq?e=view&authuser=1&nonce=apkc8d4trp1vg&user=04359672664186897194&hash=58qq42cdpmjl33tvup9q2jon6c70ftod",
+        "logo": "https://drive.google.com/uc?id=1xRT04rPfHO-uWDCY2kNk6vv7_nsPxgLA",
         "currency_name": "LTC",
         "share_percentage": "-2,10%",
         "currency_to_dollar": "$3,676.76 ",
         "currency_value": "39,27 LTC",
+        "chart_shadow_color": "#ECFBF6",
+        "chart_line_color": "#30E0A1",
         "chart_data": null
       },
       {
-        "logo": "https://doc-0s-ak-docs.googleusercontent.com/docs/securesc/i0r0sg117cvod54i15d091gvmafaf2ji/k5hgqjse1ham4n4hrpkvs71d3ob164sc/1620973125000/00184561884485476294/04359672664186897194/1evNxiyU9A5yB8LYnUVsOq3--Y6hc4JJq?e=view&authuser=1&nonce=apkc8d4trp1vg&user=04359672664186897194&hash=58qq42cdpmjl33tvup9q2jon6c70ftod",
+        "logo": "https://drive.google.com/uc?id=1WjDNeikRGRNNPHHATyC6nzEkNQYueMDz",
         "currency_name": "XRP",
         "share_percentage": "+0,27%",
         "currency_to_dollar": "$5,241.62 ",
         "currency_value": "16447,65 XRP",
+        "chart_shadow_color": "#F0F1FF",
+        "chart_line_color": "#638FFE",
         "chart_data": null
       }
     ]

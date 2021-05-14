@@ -16,80 +16,52 @@ import com.ranajit.tredzerv.R
 import com.ranajit.tredzerv.model.CurrencyResponse.Data.Portfolio
 import com.ranajit.tredzerv.ui.MainActivity
 import org.json.JSONException
-import org.json.JSONObject
 
-class ChartsAdapter(private var bankList: ArrayList<Portfolio?>?, private val context: Context) : RecyclerView.Adapter<ChartsAdapter.ChartsViewHolder>() {
+/**
+ * Created by Ranajit on 14,May,2021
+ */
+class ChartsAdapter(private var currencyList: ArrayList<Portfolio?>?, private val context: Context) : RecyclerView.Adapter<ChartsAdapter.ChartsViewHolder>() {
     private  val animationDuration = 1000L
-    private val bankInterface: MainActivity
+    private val currencyInterface: MainActivity = context as MainActivity
 
     fun updateData(dataJsonArray: ArrayList<Portfolio?>?) {
-        bankList = dataJsonArray
+        currencyList = dataJsonArray
         notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChartsViewHolder {
-        val bankListRow: View = LayoutInflater.from(parent.context).inflate(R.layout.list_item_currency, parent, false)
-        return ChartsViewHolder(bankListRow)
+        val currencyListRow: View = LayoutInflater.from(parent.context).inflate(R.layout.list_item_currency, parent, false)
+        return ChartsViewHolder(currencyListRow)
     }
 
     override fun onBindViewHolder(holder: ChartsViewHolder, position: Int) {
         try {
-            val bankObject = bankList?.get(position)
-            holder.txt_card_title.text = bankObject?.currencyName
-            holder.txt_card_desc.text = bankObject?.sharePercentage
-            holder.txt_card_amt_title.text = bankObject?.currencyToDoller
-            holder.txt_card_amt_desc.text = bankObject?.currencyValue
-            if (selectedPosition == position) {
-                holder.main_ll.setBackgroundColor(context.resources.getColor(R.color.white))
-             //   holder.bank_name_tv.setTextColor(
-//                    context.resources.getColor(R.color.material_grey_800)
-//                )
-            } else {
-                holder.main_ll.setBackgroundColor(context.resources.getColor(R.color.white))
-//                holder.bank_name_tv.setTextColor(
-//                    context.resources.getColor(R.color.material_grey_800)
-//                )
-            }
+            val currencyObject = currencyList?.get(position)
+            holder.txt_card_title.text = currencyObject?.currencyName
+            holder.txt_card_desc.text = currencyObject?.sharePercentage
+            holder.txt_card_amt_title.text = currencyObject?.currencyToDoller
+            holder.txt_card_amt_desc.text = currencyObject?.currencyValue
+            Glide.with(context).load(currencyObject?.logo).into(holder.imageView)
 
-            Glide.with(context).load(bankObject?.logo).into(holder.imageView)
-
-
-
-
-
+            holder.lineChart.lineColor = Color.parseColor(currencyObject?.chartLineColor)
             holder.lineChart.gradientFillColors =
                 intArrayOf(
-                    Color.parseColor("#81000000"),
+                    Color.parseColor(currencyObject?.chartShadowColor),
                     Color.TRANSPARENT
                 )
             holder.lineChart.animation.duration = animationDuration
-
-            holder.lineChart.onDataPointTouchListener = { index, _, _ ->
-//                Toast.makeText(
-//                    this, "" + bankList.get(position).toList()[index]
-//                        .second
-//                        .toString(), Toast.LENGTH_SHORT
-//                ).show()
-                /*lineChartValue.text =
-                    lineSet.toList()[index]
-                        .second
-                        .toString()*/
-            }
-            bankList?.get(position)?.let { holder.lineChart.animate(it.chartData) }
+            currencyList?.get(position)?.let { holder.lineChart.animate(it.chartData) }
 
 
         } catch (e: Exception) {
-           // LogUtils.logE("Exception", e)
+            Log.e("Exception", "",e)
         }
     }
 
     override fun getItemCount(): Int {
-        return bankList!!.size
+        return currencyList!!.size
     }
 
-    interface BankInterface {
-        fun setData(selectedData: JSONObject?)
-    }
 
     inner class ChartsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         var main_ll: ConstraintLayout
@@ -112,8 +84,8 @@ class ChartsAdapter(private var bankList: ArrayList<Portfolio?>?, private val co
                 View.OnClickListener {
                     try {
                         selectedPosition = adapterPosition
-                        bankList?.get(selectedPosition)?.let { it1 ->
-                            bankInterface.setupMainChart(
+                        currencyList?.get(selectedPosition)?.let { it1 ->
+                            currencyInterface.setupMainChart(
                                 it1
                             )
                         }
@@ -130,7 +102,4 @@ class ChartsAdapter(private var bankList: ArrayList<Portfolio?>?, private val co
         var selectedPosition = -1
     }
 
-    init {
-        bankInterface = context as MainActivity
-    }
 }
