@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/white"
     android:paddingVertical="5dp"
     android:id="@+id/main_ll"
     android:layout_height="wrap_content">
@@ -58,6 +57,7 @@
         app:chart_axis="none"
         app:chart_gridEffect="dotted"
         app:chart_labelsColor="#FF70977F"
+        android:clickable="false"
         app:chart_labelsFont="@font/sf_pro_display_regular"
         app:chart_labelsSize="10sp"
         app:chart_lineColor="@color/purple_700"
