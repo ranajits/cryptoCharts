@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="@+id/anim_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="graph.json"
+            app:lottie_loop="true" />
+
+        <com.hanks.htextview.typer.TyperTextView
+            android:id="@+id/anim_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TREDZERV."
+            app:charIncrease="1"
+            android:textSize="45sp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:textStyle="italic"
+            android:textColor="@color/text_color_dark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:typerSpeed="80"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

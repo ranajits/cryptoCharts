@@ -14,7 +14,7 @@ import com.bumptech.glide.Glide
 import com.db.williamchart.view.LineChartView
 import com.ranajit.tredzerv.R
 import com.ranajit.tredzerv.model.CurrencyResponse.Data.Portfolio
-import com.ranajit.tredzerv.ui.MainActivity
+import com.ranajit.tredzerv.ui.portfolio.PortfolioActivity
 import org.json.JSONException
 
 /**
@@ -22,7 +22,7 @@ import org.json.JSONException
  */
 class ChartsAdapter(private var currencyList: ArrayList<Portfolio?>?, private val context: Context) : RecyclerView.Adapter<ChartsAdapter.ChartsViewHolder>() {
     private  val animationDuration = 1000L
-    private val currencyInterface: MainActivity = context as MainActivity
+    private val currencyInterface: PortfolioActivity = context as PortfolioActivity
 
     fun updateData(dataJsonArray: ArrayList<Portfolio?>?) {
         currencyList = dataJsonArray

@@ -3,4 +3,6 @@
     <string name="portfolio">Portfolio</string>
     <string name="charts">Charts</string>
     <string name="see_all">See All</string>
+    <string name="please_wait">Please wait</string>
+    <string name="something_went_wrong">Something went wrong. Please try again</string>
 </resources>

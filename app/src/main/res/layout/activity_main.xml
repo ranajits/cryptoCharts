@@ -1,182 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/main_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.MainActivity">
-
-        <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/sf_pro_display_bold"
-            android:padding="15dp"
-            android:text="@string/portfolio"
-            android:textColor="@color/text_color_dark"
-            android:textSize="25sp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+        android:visibility="gone"
+        tools:context=".ui.portfolio.PortfolioActivity">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/title_card"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/txt_title">
+            android:layout_height="match_parent"
+            tools:context=".ui.portfolio.PortfolioActivity">
 
-
-            <ImageView
-                android:id="@+id/img_logo"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sf_pro_display_bold"
                 android:padding="15dp"
-                android:background="@drawable/ic_rectangle_red"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                android:text="@string/portfolio"
+                android:textColor="@color/text_color_dark"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <TextView
-                android:id="@+id/txt_card_title"
-                android:layout_width="0dp"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/title_card"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:fontFamily="@font/sf_pro_display_bold"
-                android:textColor="@color/text_color_dark"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/guideline"
-                app:layout_constraintStart_toEndOf="@+id/img_logo"
-                tools:text="BTC" />
-
-            <TextView
-                android:id="@+id/txt_card_desc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/sf_pro_display_regular"
-                android:textColor="@color/text_color_light"
-                android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/img_logo"
-                app:layout_constraintTop_toBottomOf="@id/guideline"
-
-                tools:text="Bitcoin" />
+                android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_title">
 
 
-            <TextView
-                android:id="@+id/txt_card_amt_title"
-                android:layout_width="wrap_content"
-                android:layout_height="19dp"
-                android:fontFamily="@font/sf_pro_display_bold"
-                android:gravity="end"
-                android:textColor="@color/text_color_dark"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@id/guideline"
-                app:layout_constraintEnd_toEndOf="parent"
-
-                tools:text="$10,945.00 " />
-
-            <TextView
-                android:id="@+id/txt_card_amt_desc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="15dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="5dp"
-                android:fontFamily="@font/sf_pro_display_regular"
-                android:gravity="end"
-                android:textColor="@color/text_color_light"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/guideline"
-                tools:text="1.00 BTC" />
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ic_rectangle_red"
+                    android:padding="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="1dp"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.5" />
+                <TextView
+                    android:id="@+id/txt_card_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/guideline"
+                    app:layout_constraintStart_toEndOf="@+id/img_logo"
+                    tools:text="BTC" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/txt_card_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:textColor="@color/text_color_light"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toEndOf="@+id/img_logo"
+                    app:layout_constraintTop_toBottomOf="@id/guideline"
+
+                    tools:text="Bitcoin" />
 
 
-        <FrameLayout
-            android:id="@+id/graph"
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            app:layout_constraintTop_toBottomOf="@+id/title_card">
+                <TextView
+                    android:id="@+id/txt_card_amt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="19dp"
+                    android:fontFamily="@font/sf_pro_display_bold"
+                    android:gravity="end"
+                    android:textColor="@color/text_color_dark"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/guideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+
+                    tools:text="$10,945.00 " />
+
+                <TextView
+                    android:id="@+id/txt_card_amt_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/sf_pro_display_regular"
+                    android:gravity="end"
+                    android:textColor="@color/text_color_light"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/guideline"
+                    tools:text="1.00 BTC" />
 
 
-            <com.db.williamchart.view.LineChartView
-                android:id="@+id/lineChart"
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline"
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <FrameLayout
+                android:id="@+id/graph"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                app:chart_axis="xy"
-                app:chart_grid="full"
-                app:chart_gridColor="#30B9C1D9"
-                app:chart_gridEffect="solid"
-                app:chart_labelsColor="#FF70977F"
-                app:chart_labelsFont="@font/sf_pro_display_regular"
-                app:chart_labelsSize="5sp"
-                app:chart_lineColor="@color/purple_700"
-                app:chart_lineThickness="2dp"
-                app:chart_smoothLine="true" />
-        </FrameLayout>
+                app:layout_constraintTop_toBottomOf="@+id/title_card">
 
-        <TextView
-            android:id="@+id/txt_charts"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:paddingTop="20dp"
-            android:paddingHorizontal="15dp"
-            android:text="@string/charts"
-            android:textColor="@color/text_color_medium"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/graph"
-            tools:text="@string/charts" />
 
-        <TextView
-            android:id="@+id/txt_see_all"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:layout_marginLeft="15dp"
-            android:fontFamily="@font/sf_pro_display_regular"
-            android:paddingHorizontal="15dp"
-            android:paddingTop="20dp"
-            android:text="@string/see_all"
-            android:textColor="@color/text_color_red"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/graph" />
+                <com.db.williamchart.view.LineChartView
+                    android:id="@+id/lineChart"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    app:chart_axis="xy"
+                    app:chart_grid="full"
+                    app:chart_gridColor="#30B9C1D9"
+                    app:chart_gridEffect="solid"
+                    app:chart_labelsColor="#FF70977F"
+                    app:chart_labelsFont="@font/sf_pro_display_regular"
+                    app:chart_labelsSize="5sp"
+                    app:chart_lineColor="@color/purple_700"
+                    app:chart_lineThickness="2dp"
+                    app:chart_smoothLine="true" />
+            </FrameLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_currencies"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="10dp"
-            app:layout_constraintTop_toBottomOf="@+id/txt_charts"
-            tools:itemCount="3"
-            tools:listitem="@layout/list_item_currency" />
+            <TextView
+                android:id="@+id/txt_charts"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="20dp"
+                android:text="@string/charts"
+                android:textColor="@color/text_color_medium"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/graph"
+                tools:text="@string/charts" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</androidx.core.widget.NestedScrollView>
+            <TextView
+                android:id="@+id/txt_see_all"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="@font/sf_pro_display_regular"
+                android:paddingHorizontal="15dp"
+                android:paddingTop="20dp"
+                android:text="@string/see_all"
+                android:textColor="@color/text_color_red"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/graph" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_currencies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt_charts"
+                tools:itemCount="3"
+                tools:listitem="@layout/list_item_currency" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

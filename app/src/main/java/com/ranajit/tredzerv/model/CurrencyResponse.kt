@@ -1,27 +1,32 @@
 package com.ranajit.tredzerv.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
 
 /**
  * Created by Ranajit on 14,May,2021
  */
+@Parcelize
 data class CurrencyResponse(
     @SerializedName("data")
     val `data`: Data?,
-    @SerializedName("message")
-    val message: String?,
     @SerializedName("request_id")
-    val requestId: String?,
-    @SerializedName("response_code")
-    val responseCode: Int?,
+    var requestId: String?,
     @SerializedName("success")
-    val success: Boolean?
-) {
+    var success: Boolean,
+    @SerializedName("response_code")
+    var responseCode: Int,
+    @SerializedName("message")
+    var message: String?
+) : Parcelable {
+    @Parcelize
     data class Data(
         @SerializedName("portfolios")
         val portfolios: ArrayList<Portfolio?>?
-    ) {
+    ) : Parcelable {
+        @Parcelize
         data class Portfolio(
             @SerializedName("currency_name")
             val currencyName: String?,
@@ -39,6 +44,6 @@ data class CurrencyResponse(
             val chartLineColor: String?,
             @SerializedName("chart_data")
             var chartData: List<Pair<String, Float>>
-        )
+        ) : Parcelable
     }
 }

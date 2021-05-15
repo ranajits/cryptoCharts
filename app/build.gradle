@@ -18,13 +18,27 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
+        buildConfigField "String", "BASE_URL", '"https://jsonkeeper.com/"'
+
 
     }
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
+            useProguard true
+            debuggable false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+        debug {
+            minifyEnabled false
+            shrinkResources false
+            useProguard true
+            debuggable false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
         }
     }
     compileOptions {
@@ -33,6 +47,18 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    signingConfigs {
+        config {
+            keyAlias 'dezerv'
+            keyPassword '123456'
+            storeFile file('C:\\Users\\DELL\\Documents\\Confidential\\dezerv jks\\dezerv.jks')
+            storePassword '123456'
+        }
     }
 }
 
@@ -46,7 +72,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
@@ -74,5 +99,15 @@ dependencies {
     //Multidex
     implementation 'com.android.support:multidex:1.0.3'
 
+    // rxjava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+
+    //Lottie Animation
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    //typerText
+    implementation "com.hanks:htextview-base:0.1.6"        // base library
+    implementation "com.hanks:htextview-typer:0.1.6"       // optional
 
 }
